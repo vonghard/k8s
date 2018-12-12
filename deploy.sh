@@ -13,5 +13,5 @@ docker push vonghard/multi_worker:$GIT_SHA
 kubectl apply -f k8s
 
 kubectl set image deployments/server-deployment server=vonghard/multi_server:$GIT_SHA
-kubectl set image deployments/client-deployment server=vonghard/multi_client:$GIT_SHA
-kubectl set image deployments/worker-deployment server=vonghard/multi_worker:$GIT_SHA
+kubectl set image deployments/client-deployment client=vonghard/multi_client:$GIT_SHA
+kubectl set image deployments/worker-deployment worker=vonghard/multi_worker:$GIT_SHA
